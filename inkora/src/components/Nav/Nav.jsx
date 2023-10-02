@@ -11,6 +11,10 @@ const navItems = [
       href: "/",
     },
     {
+        title: "",
+        href: "/cross",
+      },
+    {
       title: "About",
       href: "/about",
     },
@@ -26,10 +30,10 @@ const Nav = () => {
             {
               navItems.map( (data, index) => {
                 return (
-                    <>
-                      <NavLink key={index} data={{...data, index}} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator}></NavLink>
-                      {index === 0 && <motion.div className={styles.plusSign} variants={slide} initial="initial" animate="enter" exit="exit"></motion.div>}
-                    </>
+                    <div key={index}>
+                            <NavLink data={{...data, index}} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator} />
+                            {index === 1 && <motion.div className={styles.plusSign} variants={slide} initial="initial" animate="enter" exit="exit" />}
+                    </div>
                   )
               })
             }

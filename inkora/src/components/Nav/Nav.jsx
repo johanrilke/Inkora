@@ -32,7 +32,7 @@ const Nav = () => {
                 return (
                     <div key={index}>
                             <NavLink data={{...data, index}} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator} />
-                            {index === 1 && <motion.div className={styles.plusSign} variants={slide} initial="initial" animate="enter" exit="exit" />}
+                            {index === 1 && <motion.div className={styles.crucifix} variants={slide} initial="initial" animate="enter" exit="exit" />}
                     </div>
                   )
               })

@@ -19,7 +19,7 @@ const Display = () => {
       {gif && (
         <div className={styles.imageContainer}>
           <Image src={gif.source} alt={gif.title} key={gif.title} width={500} height={500}/>
-          <p className={styles.title}>{gif.title}</p>
+          <p className={styles.title}>Exhibit: {gif.title}</p>
         </div>
       )}
     </div>
